@@ -20,15 +20,15 @@ public class PersonDTO {
 
     private Long id;
 
-    @NotEmpty
+    @NotEmpty(message = "FirstName cannot be empty")
     @Size(min = 2, max = 100)
     private String firstName;
 
-    @NotEmpty
+    @NotEmpty(message = "LastName cannot be empty")
     @Size(min = 2, max = 100)
     private String lastName;
 
-    @NotEmpty
+    @NotEmpty(message = "Cpf cannot be empty")
     @CPF
     private String cpf;
 
@@ -36,6 +36,6 @@ public class PersonDTO {
     private String birthDate;
 
     @Valid
-    @NotEmpty
+    @NotEmpty(message = "Phone cannot be empty")
     private List<PhoneDTO> phones;
 }
